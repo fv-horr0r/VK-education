@@ -12,7 +12,7 @@ def test_check_adding_type_str():
 @pytest.mark.parametrize("expected_excepion", [(AssertionError)])
 def test_wrong_type(expected_excepion):
     with pytest.raises(expected_excepion):
-        assert tuple_check(object) is not tuple
+        assert tuple_check('123') is not tuple
 
 def test_check_add_type_int():
     assert int_check(1) == int
